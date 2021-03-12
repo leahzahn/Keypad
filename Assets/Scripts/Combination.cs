@@ -5,10 +5,11 @@ using UnityEngine;
 public class Combination
 {
     private List<int> combination;
+    private List<int> defaultCombination = new List<int> { 1, 2, 3, 4 };
 
     public Combination()
     {
-        combination = new List<int> { 2, 4, 6, 8};
+        combination = CombinationLoader.Load(defaultCombination);
     }
 
     public int GetCombinationDigit(int digitNumber)
